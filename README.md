@@ -1,28 +1,19 @@
 # loginsystem
 
-> A Vue.js project
-Run seeder to create the Super User
-Username : admin
+> A Hotel (User, Client and Room) Management project
 ## Build Setup
-
-``` bash
-# install dependencies
+# install dependencies for front
 npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
+# install dependencies for back
+cd back
 
-# build for production with minification
-npm run build
+#copy the .env
+rename example.env to .env
+# then
+npm install
+# Run seeder to create Super-user
+npm seeder
 
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Username : admin
+Password : admin

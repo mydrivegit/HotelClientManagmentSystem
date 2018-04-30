@@ -14,7 +14,7 @@
           <button type="button" class="btn btn-danger pull-right" data-toggle="modal" data-target=".bd-example-modal-sm" @click="removeData(room._id)">Remove</button>
         </div>
         <div class="card-footer footerH">
-          <CountdownTimer :date="room.time"></CountdownTimer>
+          <timer :date="room.time"></timer>
         </div>
       </div>
     </div>
@@ -23,8 +23,7 @@
 </template>
 
 <script>
-import CountdownTimer from './timer'
-import Book from './book.vue'
+import timer from './timer'
 import http from './../../helper/axois'
 export default {
   data () {
@@ -33,8 +32,7 @@ export default {
     }
   },
   components: {
-    CountdownTimer,
-    Book
+    timer
   },
   methods: {
     removeData (arg) {

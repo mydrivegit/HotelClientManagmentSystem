@@ -1,9 +1,10 @@
-import User from '../models/user'
-import bcrypt from 'bcryptjs'
 import mongoose from 'mongoose'
+import User from '../models/user.js'
+import bcrypt from 'bcryptjs'
 import dotEnv from 'dotenv'
 dotEnv.config()
 
+mongoose.Promise = global.Promise
 mongoose.connect('mongodb://localhost:' + process.env.MONGOSERVERPORT + '/hotel_reservation_system', {}, (err) => {
   if (err) {
     throw err
@@ -12,8 +13,9 @@ mongoose.connect('mongodb://localhost:' + process.env.MONGOSERVERPORT + '/hotel_
     let user = new User({
       username: 'admin',
       password: bcrypt.hashSync('admin', 10),
-      firstName: 'admin',
-      lastName: 'admin'
+      first_name: 'admin',
+      last_name: 'admin',
+      role: 'Admin'
     })
     user.save(() => {
       setTimeout(() => {

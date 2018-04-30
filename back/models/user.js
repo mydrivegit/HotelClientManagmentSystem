@@ -1,5 +1,4 @@
 import mongoose from 'mongoose'
-// import pick from 'lodash/pick'
 
 let UserSchema = new mongoose.Schema({
   username: {
@@ -22,11 +21,5 @@ let UserSchema = new mongoose.Schema({
 {
   timestamps: true
 })
-
-// UserSchema.methods.toJSON = function () {
-//   let user = this
-//   let userObject = user.toObject()
-//   return pick(userObject, ['_id', 'username', 'firstName', 'lastName'])
-// }
 
 export default mongoose.model('User', UserSchema)
