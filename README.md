@@ -7,8 +7,7 @@ npm install
 
 # install dependencies for back
 cd back
-
-#copy the .env
+# copy the .env
 rename example.env to .env
 # then
 npm install
