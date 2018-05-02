@@ -41,7 +41,7 @@ const router = new Router({
       }
     },
     {
-      path: '/users/:id',
+      path: '/users/:userId',
       name: 'manageUser',
       components: {
         default: manageUser, 'navbar': navbar, 'sidebar': sidebar

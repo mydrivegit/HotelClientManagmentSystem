@@ -20,8 +20,8 @@
                         <label  class="form-group col-md-6 text-nowrap">First name</label>
                         <div class="form-group col-md-6">
                             <input v-if="show" type="text" class="form-control form-control-sm"
-                            v-model="users.firstName" autofocus>
-                            <div v-else type="text">{{users.firstName}}</div>
+                            v-model="users.first_name" autofocus>
+                            <div v-else type="text">{{users.first_name}}</div>
                         </div>
                     </div>
                 </div>
@@ -32,8 +32,8 @@
                         <label class="form-group col-md-6 text-nowrap">Last name</label>
                         <div class="form-group col-md-6">
                             <input v-if="show" type="text" class="form-control form-control-sm"
-                            v-model="users.lastName">
-                            <div v-else type="text">{{users.lastName}}</div>
+                            v-model="users.last_name">
+                            <div v-else type="text">{{users.last_name}}</div>
                         </div>
                   </div>
                 </div>
@@ -97,9 +97,7 @@ export default {
   },
   computed: {
     users () {
-      if (this.$store.getters.userId) {
-        return this.$store.getters.userId
-      }
+      return this.$store.getters.userId
     },
     role () { return this.$store.state.role }
   },
